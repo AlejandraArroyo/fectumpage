@@ -36,7 +36,7 @@ function EnviarCorreo($nombre,$mail,$mensaje,$telefono)
     $subject = "Fectum Group: Nuevo mensaje";
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $message = mail_constructor($nombre,$mail,$mensaje);
+    $message = mail_constructor($nombre,$mail,$mensaje,$telefono);
     mail($to, $subject, $message, $headers);
     $enviar = 1;
     if($enviar == 1)

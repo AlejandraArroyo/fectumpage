@@ -1,8 +1,9 @@
 <?php
 
 
-function mail_constructor($nombre,$mail,$mensaje){
+function mail_constructor($nombre,$mail,$mensaje,$telefono){
 	$title = 'Nuevo mensaje de : '.$nombre.'('.$mail.')';
+	
  	return $salida = '
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +35,8 @@ function mail_constructor($nombre,$mail,$mensaje){
 					<td align="center" bgcolor="#ffffff" style="padding: 10px 30px 10px 30px;">
 					
 						<h2>'.$title.'</h2>
+						<h3>Telefono: '.$telefono.'</h3>
+						
 					</td>
 				</tr>
 				<tr>		
